@@ -7,7 +7,11 @@ import com.bumptech.glide.Glide
 import java.text.SimpleDateFormat
 import java.util.*
 
+/**
+ * to load image url with Glide library
+ */
 @BindingAdapter("imageUrl")
+
 fun loadImage(view: ImageView, url: String?) {
     if (!url.isNullOrEmpty()) {
         Glide.with(view.context).load(url).into(view)

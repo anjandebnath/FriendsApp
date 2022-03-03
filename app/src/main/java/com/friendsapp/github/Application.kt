@@ -6,6 +6,9 @@ import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 
 @HiltAndroidApp
+/**
+ * For DI this Application class is important
+ */
 class Application : Application() {
 
     override fun onCreate() {
