@@ -18,12 +18,48 @@
         style="@style/CardView.Light"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp">
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@android:color/white"
+        android:layout_margin="10dp"
+        app:cardElevation="8dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="@{() -> clickListener.onClick(data)}"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/image"
+                app:imageUrl="@{data.avatar}"
+                app:srcCompat="@drawable/ic_avatar_40dp"/>
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="@{data.username}"
+                android:textSize="21dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/subtitle_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{data.country}"
+                android:textSize="18dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="@{() -> clickListener.onClick(data)}">
@@ -74,7 +110,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/image"
             tools:text="CN"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
   </androidx.cardview.widget.CardView>
 

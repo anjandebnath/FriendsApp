@@ -5,7 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.friendsapp.github.databinding.ItemUsersListBinding
+import com.friendsapp.github.databinding.GridUsersListBinding
+
 import com.friendsapp.github.domain.UserListItem
 import dagger.hilt.android.scopes.FragmentScoped
 import javax.inject.Inject
@@ -23,7 +24,7 @@ class UsersListAdapter @Inject constructor(val clickListener: ClickListener) :
         return ViewHolder.from(parent)
     }
 
-    class ViewHolder private constructor(private val binding: ItemUsersListBinding) :
+    class ViewHolder private constructor(private val binding: GridUsersListBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: UserListItem, clickListener: ClickListener) {
@@ -35,7 +36,7 @@ class UsersListAdapter @Inject constructor(val clickListener: ClickListener) :
         companion object {
             fun from(parent: ViewGroup): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = ItemUsersListBinding.inflate(layoutInflater, parent, false)
+                val binding = GridUsersListBinding.inflate(layoutInflater, parent, false)
                 return ViewHolder(binding)
             }
         }

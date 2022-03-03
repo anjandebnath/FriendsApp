@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import com.friendsapp.github.R
 import com.friendsapp.github.databinding.FragmentUserListBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -34,6 +35,7 @@ class UserListFragment : Fragment() {
         )
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
+        binding.recyclerView.layoutManager = GridLayoutManager(context,2)
         binding.recyclerView.adapter = adapter
 
         return binding.root
