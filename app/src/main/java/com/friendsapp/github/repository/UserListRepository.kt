@@ -35,7 +35,7 @@ class UserListRepository @Inject constructor(
                         val id = i
 
                         // Avatar
-                        val avatar = items[i].picture.thumb ?: "N/A"
+                        val avatar = items[i].picture.medium ?: "N/A"
                         val largeAvatar = items[i].picture.large ?: "N/A"
 
                         // UserName
