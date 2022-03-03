@@ -15,7 +15,8 @@ data class DatabaseUserListItem constructor(
     val state: String,
     val country: String,
     val email: String,
-    val cellPhone: String
+    val cellPhone: String,
+    val largeAvatar : String
 
 )
 
@@ -29,7 +30,8 @@ fun List<DatabaseUserListItem>.asDomainModel(): List<UserListItem> {
             state = it.state,
             country = it.country,
             email = it.email,
-            cellPhone = it.cellPhone
+            cellPhone = it.cellPhone,
+            largeAvatar = it.largeAvatar
         )
     }
 }
@@ -37,7 +39,7 @@ fun List<DatabaseUserListItem>.asDomainModel(): List<UserListItem> {
 fun DatabaseUserListItem.asDomainModel(): UserDetails {
     return UserDetails(
         //id = id,
-        avatar = avatar,
+        avatar = largeAvatar,
         username = username,
         city = city,
         state = state,

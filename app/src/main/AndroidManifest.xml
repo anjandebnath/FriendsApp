@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.friendsapp.github">
     <uses-permission android:name="android.permission.INTERNET" />
+
+
     <application
         android:name="com.friendsapp.github.Application"
         android:allowBackup="true"

@@ -36,7 +36,7 @@ class UserListRepository @Inject constructor(
 
                         // Avatar
                         val avatar = items[i].picture.thumb ?: "N/A"
-                        Log.d("Avatar: ", avatar)
+                        val largeAvatar = items[i].picture.large ?: "N/A"
 
                         // UserName
                         val firstName = items[i].name.first?: "N/A"
@@ -60,7 +60,8 @@ class UserListRepository @Inject constructor(
                             state,
                             country,
                             email,
-                            cellPhone
+                            cellPhone,
+                            largeAvatar
                         )
 
                         itemsArray.add(model)

@@ -8,5 +8,6 @@ data class UserListItem(
     val state: String,
     val country: String,
     val email: String,
-    val cellPhone: String
+    val cellPhone: String,
+    val largeAvatar: String
 )

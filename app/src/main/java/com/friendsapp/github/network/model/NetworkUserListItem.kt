@@ -1,15 +1,7 @@
 package com.friendsapp.github.network.model
 
 
-
-
-import com.friendsapp.github.database.DatabaseUserListItem
 import com.google.gson.annotations.SerializedName
-
-
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
-import retrofit2.Response
 
 data class NetworkUserListItem(
     @SerializedName("results")

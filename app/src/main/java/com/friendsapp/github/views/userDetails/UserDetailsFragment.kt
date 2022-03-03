@@ -45,8 +45,6 @@ class UserDetailsFragment : Fragment() {
         binding.email.setLinkTextColor(Color.BLUE);
         binding.email.setOnClickListener {
 
-            Toast.makeText(activity, "Clicked", Toast.LENGTH_LONG).show()
-
             val intent = Intent(Intent.ACTION_SENDTO)
             intent.data = Uri.parse("mailto:") // only email apps should handle this
             /*intent.putExtra(Intent.EXTRA_EMAIL, "desmond.lua@luasoftware.com")
