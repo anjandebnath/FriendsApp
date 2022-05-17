@@ -37,6 +37,7 @@ class UserListFragment : Fragment() {
             inflater, R.layout.fragment_user_list, container, false
         )
         binding.viewModel = viewModel
+        // lifecycle of the fragment's view
         binding.lifecycleOwner = viewLifecycleOwner
         binding.recyclerView.layoutManager = GridLayoutManager(context,2)
         binding.recyclerView.adapter = adapter
