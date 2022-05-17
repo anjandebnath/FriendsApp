@@ -12,7 +12,7 @@ Friends Android App
 
 - Code should maintain solid principle
 
-- Code should have DI(Hilt)
+- Code should have Dependency Injection(Hilt) 
 
 - For state handling, need to use state & flow
 
