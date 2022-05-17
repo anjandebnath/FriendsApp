@@ -16,6 +16,9 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class UserListFragment : Fragment() {
+
+    // Use the 'by viewModels()' Kotlin property delegate
+    // from the activity-ktx artifact
     private val viewModel: UserListViewModel by viewModels()
 
     @Inject
