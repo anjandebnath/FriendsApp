@@ -18,6 +18,7 @@ class UserListRepository @Inject constructor(
     private val database: UsersDatabase
 ) {
     var itemsArray: ArrayList<DatabaseUserListItem> = ArrayList()
+
     val users: LiveData<List<UserListItem>> =
         Transformations.map(database.usersDao.getDatabaseUsers()) {
             it.asDomainModel()
